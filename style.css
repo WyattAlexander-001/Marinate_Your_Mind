@@ -1,0 +1,61 @@
+/* 98-era color palette */
+:root {
+    --win-bg: #008080;
+    --win-gray: #c0c0c0;
+    --win-dark: #808080;
+    --win-light: #ffffff;
+    --win-blue: #000080;
+}
+
+/* single, unified html/body rule */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #008080 url("../images/fixed_steak_tileset.png") repeat;
+  background-size: 512px 512px;     /* one full tile per repeat   */
+  image-rendering: pixelated;       /* crisp pixel art            */
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  color: #585858;
+  /* cute CRT glow */
+  text-shadow: 0 0 1px #fff;
+  cursor: url("../images/cur/Normal Select.cur"), auto; /* optional */
+}
+
+/* ========= FAUX WINDOW ========= */
+#window{
+    /* if this block covers the tiles, shrink it or remove its background */
+    width:840px;              
+    max-width:95vw;
+    margin:auto;         /* 24-px gap from top of page           */
+    border:2px solid var(--win-light);
+    border-right-color:var(--win-dark);
+    border-bottom-color:var(--win-dark);
+    background:var(--win-gray); /* REMOVE this line if you want tiles visible *inside* window */
+    box-shadow:0 0 0 2px #000;
+}
+
+/* ========= TITLE BAR ========= */
+.title-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:2px 6px;
+  
+    background:linear-gradient(#000089, #0000b0 40%, #000089);
+    color:#fff;
+    font-weight:bold;
+    user-select:none;
+  }
+  .controls button{
+    width:18px;
+    height:15px;
+    margin-left:2px;
+    border:1px outset var(--win-light);
+    background:var(--win-gray);
+    font-size:10px;
+    line-height:13px;
+    padding:0;
+    cursor:pointer;
+  }
+

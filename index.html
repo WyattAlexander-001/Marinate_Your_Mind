@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Marinate Your Mind</title>
+
+</head>
+<body>
+  <div id="window">
+    <!-- ==== WINDOW TITLE BAR ==== -->
+    <div class="title-bar">
+      <span>MarinateYourMind.txt - Notepad</span>
+      <div class="controls">
+        <button title="Minimize">_</button>
+        <button title="Maximize">☐</button>
+        <button title="Close">X</button>
+      </div>
+    </div>
+
+    <!-- ==== SCROLLABLE CONTENT AREA ==== -->
+    <div class="content">
+
+      <!-- Hero -->
+      <h1>Marinating the Material</h1>
+      <p>Welcome dear viewer, this is a simple single page website for the purpose of sharing my philosophy on studying. I dub my technique, “marinating the material.” I also share how I personally feel about other studying techniques. The term “marination” is a direct reference to one of my favorite meals, a nice marinated steak because all good things take <em>thyme</em>!</p>
+
+      <img class="placeholder" alt="Placeholder: juicy marinated steak">
+
+      <!-- Intro -->
+      <p>The core idea is that you want to have your mind constantly surrounded, or “marinated in” with the material you want to learn...</p>
+
+      <!-- === SECTION: WHY OTHER TECHNIQUES FAIL === -->
+      <h2>Why I Don’t Like Other Techniques</h2>
+      <p>I think I should start by explaining why I came up with this method...</p>
+
+      <img class="placeholder" alt="Placeholder: sad flashcards">
+
+      <!-- Long‑form essay (initially collapsed) -->
+      <button class="toggle" onclick="toggleEssay()">Read the full rant</button>
+      <div id="essay" style="display:none;">
+        <!--
+          Paste the rest of your (very long) essay here. Each logical paragraph
+          should be wrapped in <p> tags. Break large blocks into multiple
+          paragraphs for readability.
+        -->
+        <p>Flashcards are the embodiment of this wrongness...</p>
+        <!-- KEEP PASTING CONTENT AS <p> ... </p>  -->
+      </div>
+
+      <!-- END CONTENT -->
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
