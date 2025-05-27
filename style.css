@@ -59,3 +59,13 @@ body {
     cursor:pointer;
   }
 
+  /*Hover on buttons*/
+  .controls button:hover{
+    border-style:inset;
+  }
+
+/* Hover to make X red */
+.closeX:hover {
+    background-color: red;
+}
+
