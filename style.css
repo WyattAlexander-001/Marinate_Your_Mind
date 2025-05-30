@@ -35,6 +35,33 @@ body {
     box-shadow:0 0 0 2px #000;
 }
 
+/* ---------- FULL-SCREEN MODE ---------- */
+#window.maximized{
+    position: fixed;
+    inset: 0;                  /* top:0; right:0; bottom:0; left:0 */
+    width: 100vw !important;   /* fill viewport */
+    height: 100vh !important;
+  
+    /* ← the important bit → */
+    max-width: none !important;   /* cancel the 65-vw clamp */
+    max-height: none !important;  /* (cancels nothing now, but future-proof) */
+  
+    margin: 0 !important;
+  
+    background: var(--win-gray);  /* solid panel hides the steaks */
+    border: none;
+    box-shadow: none;
+  
+    z-index: 999;
+    overflow: auto;
+  
+    /* optional zoom animation */
+    transition: all .25s ease;
+  }
+  
+  
+  
+  
 /* ========= TITLE BAR ========= */
 .title-bar{
     display:flex;

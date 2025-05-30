@@ -1,12 +1,37 @@
-// Toggle show / hide for the long essay block
-function toggleEssay(button) {
-    const block = button.nextElementSibling;
-    block.style.display = block.style.display === "none" ? "block" : "none";
+/* --------------------------------------------------
+   EXPAND / COLLAPSE – works for every .toggle button
+   -------------------------------------------------- */
+   function toggleEssay(btn) {
+    // assumes the collapsible <div> is the very next sibling
+    const block = btn.nextElementSibling;
+    const isHidden = block.style.display === "none" || block.style.display === "";
+    block.style.display = isHidden ? "block" : "none";
+  
+    // swap the button label
+    btn.textContent = isHidden ? "[-] Collapse" : "[+] Expand";
   }
   
-  // (Optional) Faux title‑bar buttons
+  /* --------------------------------------------------
+     FAUX TITLE-BAR BUTTONS
+     -------------------------------------------------- */
   const win = document.getElementById("window");
-  const btns = document.querySelectorAll(".controls button");
-  btns[0].onclick = () => win.style.display = "none";                // hide
-  btns[1].onclick = () => win.style.width = "100%";                  // simple max
-  btns[2].onclick = () => alert("You can't close learning! 😉");     // playful
+  const [minBtn, maxBtn, closeBtn] = document.querySelectorAll(".controls button");
+  
+  /*  minimize (“_”) – just hide the window  */
+  minBtn.onclick = () => {
+    win.style.display = "none";
+  };
+  
+  /*  maximize / restore (“☐” ⇄ “🗗”)  */
+/*  maximize / restore  */
+maxBtn.onclick = () => {
+    const isMax = win.classList.toggle("maximized");
+    maxBtn.textContent = isMax ? "🗗" : "☐";
+  };
+  
+  
+  /*  close (“X”) – playful alert ↓  */
+  closeBtn.onclick = () => {
+    alert("You can't close learning! 😉");
+  };
+  
